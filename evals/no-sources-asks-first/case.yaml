@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: no-sources-asks-first
+expected_outcome: |
+  The user asks for personas for a product idea and has no brief, no research and no files. The agent does not write personas. It asks 3 to 5 specific questions (who it is for and who pays, what they do today, what material exists, main scenarios, what is known versus believed), and offers the options: provide material, let the agent collect public material if web tools exist, or a hypothesis-only draft where everything is an assumption with no quotes and no numbers. It creates no personas file with invented facts.
+---
+tags: [proto-personas]
+max_turns: 20
+timeout_seconds: 600
+allowed_tools: [Read, Glob, Grep, Skill, Write, Edit, Bash]
+---
+
+Make me proto-personas for my app idea: a habit tracker for adults with ADHD. I don't have any research or brief, just do it quickly, I need them today.
